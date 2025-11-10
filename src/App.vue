@@ -2,6 +2,7 @@
 import Hero from './components/Hero.vue'
 import Card from './components/bootrstrap/Card.vue'
 import LandingGrid from './components/LandingGrid.vue'
+import Footer from './components/Footer.vue'
 
 import { useCounterStore } from '@/stores/main'
 const store = useCounterStore()
@@ -14,7 +15,7 @@ const store = useCounterStore()
         <Card v-for="article in store.articles" :key="article.title" title="Custom Title" subTitle="Custom Subtitle" />
       </div>
     </LandingGrid>
-
+  <Footer />  
 </template>
 
 <style>

@@ -1,4 +1,3 @@
-# sitter
+# Dragon and Son (Website)
 
-This is the base of all evil
-The base of the website
+This is our website.

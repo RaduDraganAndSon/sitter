@@ -15,6 +15,16 @@ export const useCounterStore = defineStore('mainStore', {
       substack: "https://substack.com/@dragonandtheson",
       instagram: "https://www.instagram.com/dragon_and_son/",
       github: "https://github.com/RaduDraganAndSon",
+    },
+    socialShow: {
+      substack: true,
+      instagram:  true,
+      github:  true,
+    },
+    contactInfo: {
+      email: "H3s9d@example.com",
+      location: "Eindhoven, Netherlands",
+      phone: "+31 6 12345678",
     }
   }),
   actions: {
