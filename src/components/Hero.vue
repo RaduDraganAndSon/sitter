@@ -1,22 +1,38 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-})
+import { useCounterStore } from '@/stores/main'
+const store = useCounterStore()
+
 </script>
 
 <template>
-  <div class="container mt-5">
-    <div class="row justify-content-md-center">
-      <div class="col-xxl-4 col-lg-12 ">
-        <h1>h1. Bootstrap heading</h1>
-        <p>Something short and leading about the collection below—its contents, the
-          creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+  <div id="hero" class="container mt-5">
+    <div id="hero-container" class="row justify-content-md-center">
+      <div class="col-12 ">
+        <h1>{{ store.landing.title }}</h1>
+        <p class="subtext-width">{{ store.landing.description }}</p>
       </div>
     </div>
   </div>
-
-
 </template>
+
+<style lang="less" scoped>
+#hero {
+  min-height: 60vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+
+  &-container {
+    margin-top: auto;
+    margin-bottom: auto;  }
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtext-width {
+    max-width: 700px;
+  }
+}
+</style>
