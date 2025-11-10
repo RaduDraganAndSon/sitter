@@ -1,5 +1,6 @@
 <script setup>
 import { useCounterStore } from '@/stores/main'
+import Icon from './bootrstrap/Icon.vue';
 const store = useCounterStore()
 
 </script>
@@ -10,6 +11,7 @@ const store = useCounterStore()
       <div class="col-12 ">
         <h1>{{ store.landing.title }}</h1>
         <p class="subtext-width">{{ store.landing.description }}</p>
+        <Icon v-for="(value, key) in store.social" :key="key" :icon="key" :url="value"/>
       </div>
     </div>
   </div>

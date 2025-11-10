@@ -10,7 +10,12 @@ export const useCounterStore = defineStore('mainStore', {
     articles: [
       {title: "article 1", content: "content 1"},
       {title: "article 2", content: "content 3"},
-    ]
+    ],
+    social: {
+      substack: "https://substack.com/@dragonandtheson",
+      instagram: "https://www.instagram.com/dragon_and_son/",
+      github: "https://github.com/RaduDraganAndSon",
+    }
   }),
   actions: {
     getSEO() {
